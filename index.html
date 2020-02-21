@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Predict Diabetes</title>
+        
+        <link rel="stylesheet" media="screen and (max-width: 1100px)" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+    <header class = a><h1>Predict Diabetes Using Machine Learning</h1></header>
+        <div class = 'row'>
+        <div class = "formbox colom">
+            <h1 id = 'dsds'>Fill Information</h1>
+            <form action="{{ url_for('predict')}}"method="post" class = "box">
+                <div class = "r p q">
+                Pregnancies        : <input type="number" step = 1 name = "a" min = 0 value=0>
+                Glucose     : <input type="number" step = .01 name = "b" min = 0  value=0>
+                Blood Pressure       : <input type="number" step = .01 name = "c" min = 0  value=0>
+                Skin Thickness       : <input type="number" step = .1 name = "d" min = 0  value=0>
+                Insulin            : <input type="number" step = .1 name = "e" min = 0  value=0>
+                BMI  : <input type="number" step = .1 name = "f" min = 0 value=0>
+                Diabetes Pedigree Function : <input type="number" step = .0001 name = "g" min = 0  value=0>
+                Age  : <input type="number" step = 1 name = "h" min = 0  value=0>
+            </div>
+                <input type="submit" name = "" value="Done">
+            </form>
+        </div>
+        <div class = 'colom'>
+        <div class = 'det'>
+                <p>. </p>
+         </div>
+        <div class = "result">
+            <h2>Result</h2>
+            <p>{{result1}}</p>
+        </div>
+
+        </div>
+     </div>
+    <footer>
+        <p>. </p>
+    </footer>
+    </body>
+</html>
